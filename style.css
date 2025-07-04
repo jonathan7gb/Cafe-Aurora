@@ -190,3 +190,9 @@ a{
     font-size: 1.6rem;
     margin-bottom: 1rem;
 }
+
+.contact .contact-box .contact-text .hours{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
