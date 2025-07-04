@@ -1,0 +1,192 @@
+:root{
+    --primary-color: #8B4513;
+    --background-color: #fffaf5;
+    --light-color: #fff8f0;
+    --text-dark: #222;
+    --text-muted: #555;
+    --font-body: 'Poppins', sans-serif;
+    --font-logo: 'Pacifico', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    src: url('./fonts/Pacifico/Pacifico-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+}
+
+body{
+    font-family: var(--font-body);
+    background-color: var(--background-color);
+    color: var(--text-dark);
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+    
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: var(--background-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.header .header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .header-inner .logo{
+    font-family: var(--font-logo);
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.header .header-inner .menu-desktop{
+    display: none;
+}
+
+.header .header-inner .menu-mobile #menu-toggle{
+    background-color: var(--background-color);
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.hero .hero-overlay{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Images/aurora-capa.jpg') center/cover no-repeat;
+    padding: 10rem 0;
+}
+
+.hero .hero-content{
+    text-align: center;
+    color: var(--light-color);
+    z-index: 2;
+    padding: 2rem;
+}
+
+.hero .hero-content .hero-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero .hero-content .hero-description{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 1rem 1.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn:hover{
+    background-color: #5C2E0F;
+    transition: all 0.5s ease;
+}
+
+.cardapio{
+    background-color: white;
+    padding: 5rem 0;
+}
+
+.cardapio .cardapio-title{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.cardapio .cardapio-description{
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: var(--text-muted);
+}
+
+.cardapio .grid-coffes{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.cardapio .grid-coffes .card{
+    background-color: var(--light-color);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.cardapio .grid-coffes .card .card-body{
+    padding: 1.5rem;
+}
+
+.cardapio .grid-coffes .card .card-body h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.cardapio .grid-coffes .card .card-body p{
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.cardapio .grid-coffes .card .card-body .price{
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.contact{
+    background-color: rgba(139, 69, 19, 0.05);
+}
+
+.contact .contact-box{
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .contact-box .contact-text{
+    padding: 2rem;
+}
+
+.contact .contact-box .contact-text h2{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
