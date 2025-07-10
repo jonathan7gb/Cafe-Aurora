@@ -4,6 +4,7 @@
     --light-color: #f9e8d6;
     --text-dark: #222;
     --text-muted: #555;
+    --footer-background: #0a0a1a;
     --font-body: 'Poppins', sans-serif;
     --font-logo: 'Pacifico', cursive;
 }
@@ -45,6 +46,10 @@ img{
 a{
     text-decoration: none;
     color: inherit;
+}
+
+ul li{
+    list-style: none;
 }
 
 .container{
@@ -215,7 +220,7 @@ a{
 }
 
 .footer{
-    background-color: var(--text-dark);
+    background-color: var(--footer-background);
     color: var(--background-color);
 }
 
@@ -234,11 +239,13 @@ a{
 .footer .footer-inner .footer-brand{
     width: 85%;
     margin: 0 auto;
+    font-size: 0.9rem;
 }
 
 .footer .footer-inner .footer-brand .logo{
     margin-bottom: 0.5rem;
     font-size: 2rem;
+    font-weight: 500;
 }
 
 .footer .footer-inner .footer-social .social-icons{
@@ -261,10 +268,97 @@ a{
 .footer .footer-inner .footer-social .social-icons a:hover{
     background-color: #333;
     transform: scale(1.3);
+    transition: all 0.5s ease-in-out;
 }
 
 .footer .footer-inner .footer-social p{
     font-size: 0.9rem;
     padding: 2rem 0 1rem 0;
     text-align: center;
+}
+
+/* Parte Tablet */
+
+@media (min-width: 768px) {
+    .hero .hero-overlay{
+        padding: 12rem 0;
+    }
+
+   .cardapio .grid-coffes{
+        grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+
+/* Parte Desktop */
+
+@media (min-width: 1024px) {
+    .header .header-inner .menu-desktop{
+        display: block;
+    }
+
+    .header .header-inner .menu-desktop ul{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .header .header-inner .menu-desktop ul li a{
+        font-weight: 500;
+    }
+
+
+    .header .header-inner .menu-mobile{
+        display: none;
+    }
+
+    .hero .hero-overlay{
+        padding: 16rem 0;
+    }
+
+   .cardapio .grid-coffes{
+        grid-template-columns: repeat(4, 1fr);
+   }
+
+   .contact .contact-box{
+        display: flex;
+        flex-direction: row;
+        max-width: 900px;
+   }
+
+   .contact .contact-box .contact-text{
+        padding: 3rem;
+   }
+
+   .contact .contact-box .contact-text h2{
+        font-size: 2.5rem;
+        margin-top: 0.5rem;
+   }
+
+   .contact .col{
+        flex: 1 1 50%;
+   }
+
+   .contact .contact-box .contact-image{
+        max-height: 500px;
+   }
+
+   .footer .footer-inner{
+        flex-direction: row;
+   }
+
+   .footer .footer-inner .footer-social p{
+        text-align: right;
+        padding: 1rem 0 0 0 ;
+    }
+
+    .footer .footer-inner .footer-social .social-icons{
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+
+    .footer .footer-inner .col{
+        flex: 1 1 50%;
+    }
 }
